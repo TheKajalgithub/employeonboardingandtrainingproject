@@ -1,0 +1,95 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e9f5f5;
+}
+
+.hero-section h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #4628a7;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+main {
+  padding: 20px;
+  margin-top: 90px;
+}
+
+.feature {
+  display: inline-block;
+  width: 30%; /* adjust the width to your liking */
+  margin: 20px;
+   /* add some margin for spacing */
+   padding-inline: 20px;
+}
+
+.feature img {
+  width: 100%; /* make the image take up the full width of the container */
+  height: 300px; /* set a fixed height for all images */
+  object-fit: cover; /* ensure the image is scaled to fit the container */
+}
+
+.feature-btn{
+  background-color: #218838;
+  width: 70px;
+  height: 40px;
+}
+#features {
+  text-align: center; /* center the platform features section */
+}
+
+.plt {
+  margin-bottom: 20px; /* add some margin to separate the title from the features */
+}
+
+#testimonials {
+  margin: 40px 0;
+  text-align: center;
+  margin-top: 150px;
+}
+
+blockquote {
+  font-style: italic;
+  margin: 20px auto;
+  max-width: 600px;
+}
+blockquote footer {
+  margin-bottom: 10px;
+  font-weight: 500;
+
+}

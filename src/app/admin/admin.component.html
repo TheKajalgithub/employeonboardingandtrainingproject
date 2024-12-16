@@ -1,0 +1,39 @@
+<header>
+    <h1>Admin Page</h1>
+    <nav>
+      <a routerLink="/view">Dashboard</a>
+      <a routerLink="/home">Logout</a>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="user-table">
+      <h2>Registered Users</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Phone Number</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let admin of admins">
+            <td>{{ admin.id }}</td>
+            <td>{{ admin.name }}</td>
+            <td>{{ admin.email }}</td>
+            <td>{{ admin.role }}</td>
+            <td>{{ admin.phoneNumber }}</td>
+            <td class="actions">
+             
+              <button class="delete-btn" (click)="deleteAdmin(admin.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  

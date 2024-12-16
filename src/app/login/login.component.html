@@ -1,0 +1,57 @@
+<div class="login-page">
+  <!-- Background Image -->
+  <div class="login-container">
+    <div class="login-left">
+      <!-- Form Image -->
+      <img src="https://www.brianheger.com/wp-content/uploads/2021/06/Moments-That-Matter-An-Emerging-Approach-to-Understanding-Employees-Gartner.jpg" alt="form image" class="form-image">
+    </div>
+    <div class="login-right">
+      <div class="login-logo">
+        <!-- College Logo -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhbHBfx7Wb1cjPC3izbHwPwNEcyRsMkNssuiIhiZGnMw2rVFndg2l-MXcBKppSJyTOQfI&usqp=CAU" alt="college logo" class="college-logo">
+      </div>
+      <h1>Login</h1>
+
+      <form (ngSubmit)="onLogin()">
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Login-id</label>
+          <input type="email" id="email" [(ngModel)]="email" name="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+        
+        <!-- Password Field -->
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" [(ngModel)]="password" name="password" class="form-input" placeholder="Enter your password" required>
+        </div>
+
+        <!-- Role Dropdown -->
+        <div class="form-group">
+          <label for="role">Role</label>
+          <select id="role" [(ngModel)]="role" name="role" class="form-input" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="user">User</option>
+            <option value="trainer">Trainer</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <!-- Options Links -->
+        <div class="form-options">
+          <a href="#">Forgot/Reset Password</a>
+          <a href="/register">Don't have an account?</a>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="button-container">
+          <button type="submit" class="login-btn">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<blockquote>
+  <p>"Onboarding Pro has completely transformed the way we train and onboard new hires!"</p>
+  <footer>— Jane Doe, HR Manager</footer>
+</blockquote>

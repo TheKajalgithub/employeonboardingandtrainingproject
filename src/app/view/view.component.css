@@ -1,0 +1,184 @@
+/* Reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Full-height layout for body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif; /* Set a default font for consistency */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #032e04; /* Background color for navbar */
+    position: sticky; /* Navbar sticks to the top when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    color: #fef8f8;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Styling for the navigation links */
+.navbar-nav {
+    display: flex;
+    gap: 20px; /* Adds spacing between the nav links */
+}
+
+.navbar .nav-link {
+    color: white; /* Sets the link text color to white */
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar .nav-link:hover {
+    background-color: rgba(69, 219, 99, 0.2); /* Light hover effect */
+    color: #4CAF50;
+}
+
+/* Main content */
+.container {
+    flex: 1; /* Fills available space */
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 1200px;
+    margin: 20px auto; /* Center and add margin */
+    text-align: center;
+    padding: 20px;
+}
+
+.truee {
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Footer styling */
+.footer-bottom {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 15px;
+    background-color: #032e04;
+    width: 100%;
+    color: white;
+    font-size: 0.9rem;
+}
+
+/* Departments and non-teaching section */
+.departments, .non-teaching {
+    display: flex;
+    justify-content: center; /* Center align for smaller screens */
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Card styling */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.join-btn {
+    padding: 10px 20px;
+    background-color: #1abc1f;
+    color: rgb(252, 253, 252);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.join-btn:hover {
+    background-color: #046209;
+    transform: translateY(-2px);
+}
+
+/* Non-teaching heading styling */
+.non-teaching h2 {
+    width: 100%;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%; /* Cards take full width on smaller screens */
+        max-width: 300px;
+    }
+
+    .join-btn {
+        width: 100%; /* Button takes full width for better usability */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,17 @@
+<html>
+    <body>
+
+<div class="finance-page">
+    <h2>Welcome to the HR Training Module</h2>
+    <p>{{ description }}</p>
+    <h3>Available Training Modules:</h3>
+    <div *ngFor="let module of trainingModules" class="module-card">
+      <h4>{{ module.name }}</h4>
+      <p>{{ module.description }}</p>
+      <p><strong>Trainer:</strong> {{ module.trainerName }}</p>
+      <button (click)="accessModule(module)">Access Module</button>  <!-- Button to navigate to the trainer page -->
+    </div>
+  </div>
+          
+</body>
+</html>

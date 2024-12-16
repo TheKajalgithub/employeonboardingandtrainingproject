@@ -1,0 +1,19 @@
+<div class="trainer-page">
+    <h2>Welcome to the Trainer-it Page</h2>
+    <p>This is the trainer page, where you can find various training modules.</p>
+  
+    <h3>Available Training Modules:</h3>
+    
+    <div *ngFor="let module of trainingModules" class="module-card">
+      <h4>{{ module.name }}</h4>
+      
+      <!-- Input field for uploading files -->
+      <input type="file" (change)="onFileSelected($event, module)" />
+      
+      <!-- Download button, which triggers the downloadModule method -->
+      <button (click)="downloadModule(module)">Download</button>
+    </div>
+  
+    <!-- Button to navigate to the progress tracking page -->
+    <button (click)="navigateToProgressTracking()">Check Progress</button>
+  </div>

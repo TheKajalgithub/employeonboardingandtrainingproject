@@ -1,0 +1,100 @@
+
+<html>
+    <body>
+        
+<div class="application-container">
+    <h1>Gardener Training Application</h1>
+  
+    <!-- Form Section -->
+    <form (ngSubmit)="onSubmit()" #applicationForm="ngForm" *ngIf="!previewMode">
+      <!-- Gardener's Full Name -->
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          class="form-control"
+          [(ngModel)]="gardener.fullName"
+          #fullName="ngModel"
+          required
+        />
+        <div *ngIf="fullName.invalid && fullName.touched" class="error">
+          Full name is required.
+        </div>
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="contactNumber">Contact Number</label>
+        <input
+          type="tel"
+          id="contactNumber"
+          name="contactNumber"
+          class="form-control"
+          [(ngModel)]="gardener.contactNumber"
+          #contactNumber="ngModel"
+          required
+        />
+        <div *ngIf="contactNumber.invalid && contactNumber.touched" class="error">
+          Contact number is required.
+        </div>
+      </div>
+  
+      <!-- Work Experience -->
+      <div class="form-group">
+        <label for="experience">Work Experience (in years)</label>
+        <input
+          type="number"
+          id="experience"
+          name="experience"
+          class="form-control"
+          [(ngModel)]="gardener.experience"
+          #experience="ngModel"
+          min="0"
+          required
+        />
+        <div *ngIf="experience.invalid && experience.touched" class="error">
+          Please enter your experience in years.
+        </div>
+      </div>
+  
+      <!-- Preferred Training Date -->
+      <div class="form-group">
+        <label for="trainingDate">Preferred Training Date</label>
+        <input
+          type="date"
+          id="trainingDate"
+          name="trainingDate"
+          class="form-control"
+          [(ngModel)]="gardener.trainingDate"
+          #trainingDate="ngModel"
+          required
+        />
+        <div *ngIf="trainingDate.invalid && trainingDate.touched" class="error">
+          Training date is required.
+        </div>
+      </div>
+  
+      <!-- Preview & Submit Button -->
+      <button type="button" class="preview-btn" (click)="togglePreview()" [disabled]="!applicationForm.valid">
+        Preview Application
+      </button>
+    </form>
+  
+    <!-- Preview Section -->
+    <div *ngIf="previewMode" class="preview-section">
+      <h2>Confirm Your Details</h2>
+      <p><strong>Full Name:</strong> {{ gardener.fullName }}</p>
+      <p><strong>Contact Number:</strong> {{ gardener.contactNumber }}</p>
+      <p><strong>Work Experience:</strong> {{ gardener.experience }} years</p>
+      <p><strong>Preferred Training Date:</strong> {{ gardener.trainingDate | date }}</p>
+  
+      <!-- Confirm and Submit Buttons -->
+      <button type="button" class="edit-btn" (click)="togglePreview()">Edit Details</button>
+      <button type="button" class="submit-btn" (click)="onSubmit()">Confirm and Submit</button>
+    </div>
+  </div>
+</body>
+</html>
+  

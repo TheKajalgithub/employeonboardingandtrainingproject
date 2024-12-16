@@ -1,0 +1,33 @@
+/* src/app/trainer-page/trainer-page.component.css */
+.trainer-page {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .module-card {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .module-card h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .trainer-page button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .trainer-page button:hover {
+    background-color: #2980b9;
+  }
+  

@@ -1,0 +1,66 @@
+
+<html>
+    <body>
+  <div class="application-container">
+    <h1>Driver Training Application</h1>
+    <form (ngSubmit)="onSubmit()" #applicationForm="ngForm">
+      <!-- Driver's Full Name -->
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          class="form-control"
+          [(ngModel)]="driver.fullName"
+          required
+        />
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="contactNumber">Contact Number</label>
+        <input
+          type="tel"
+          id="contactNumber"
+          name="contactNumber"
+          class="form-control"
+          [(ngModel)]="driver.contactNumber"
+          required
+        />
+      </div>
+  
+      <!-- License Number -->
+      <div class="form-group">
+        <label for="licenseNumber">License Number</label>
+        <input
+          type="text"
+          id="licenseNumber"
+          name="licenseNumber"
+          class="form-control"
+          [(ngModel)]="driver.licenseNumber"
+          required
+        />
+      </div>
+  
+      <!-- Preferred Training Date -->
+      <div class="form-group">
+        <label for="trainingDate">Preferred Training Date</label>
+        <input
+          type="date"
+          id="trainingDate"
+          name="trainingDate"
+          class="form-control"
+          [(ngModel)]="driver.trainingDate"
+          required
+        />
+      </div>
+  
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn" [disabled]="!applicationForm.valid">
+        Apply for Training
+      </button>
+    </form>
+  </div>
+</body>
+</html>

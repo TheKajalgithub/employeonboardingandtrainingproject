@@ -1,0 +1,17 @@
+
+<html>
+    <body>
+        <div class="progress-page">
+            <h2>Training Progress</h2>
+            <div *ngFor="let module of trainingModules" class="progress-card">
+              <h4>{{ module.name }}</h4>
+              <p>{{ module.description }}</p>
+              <p><strong>Trainer:</strong> {{ module.trainerName }}</p>
+              <div class="progress-bar-container">
+                <div class="progress-bar" [style.width.%]="module.progress"></div>
+              </div>
+              <p>{{ module.progress }}% complete</p>
+            </div>
+          </div>
+    </body>
+</html>
